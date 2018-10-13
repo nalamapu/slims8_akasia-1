@@ -173,7 +173,7 @@ if (isset($_SESSION['memberID'])) {
         echo '<div class="infoBox">'.$reserve_msg.'</div>';
     }
 
-    // create e-mail lin if there is overdue
+    // create e-mail link if there is overdue
     if ($is_overdue) {
         echo '<div style="padding: 5px; background: #ccc;"><div id="emailStatus"></div><a class="sendEmail usingAJAX" href="'.MWB.'membership/overdue_mail.php'.'" postdata="memberID='.$memberID.'" loadcontainer="emailStatus">'.__('Send overdues notice e-mail').'</a> | <span style="color: red; font-weight: bold;">'.__('Total of temporary fines').': '.$_total_temp_fines.'.</span></div>'."\n";
     }
